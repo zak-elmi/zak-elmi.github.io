@@ -14,48 +14,34 @@ var easyWords = ["shinning", "ship", "shirt", "shoe", "shoot", "shop", "shore", 
 
 
 function xkcdWordGen() {
-      var minlen = Number(document.querySelector("#minlen").value);
-      var maxlen = Number(document.querySelector("#maxlen").value);
-      var absolutelen = Number(document.querySelector("#wordlen").value);
-      var letters;
-      var item = [];
-      if(minlen>maxlen) throw "Minimum cannot be larger than maximum"
+        
+        var minlen = Number(document.querySelector("#minlen").value);
+           var maxlen = Number(document.querySelector("#maxlen").value);
+           var absolutelen = Number(document.querySelector("#wordlen").value);
+           var letters;
+           var item = [];
+           if(minlen>maxlen) throw "Minimum cannot be larger than maximum"
 
-      if (document.querySelector("#easyType").checked == true) {
-          letters = easyWords;
-      }
-      else {
-          letters = words;
-      }
-
-      for(var i=0; i<10; i++) {
-       while (item<absolutelen){
-
-          var randomVal = letters[Math.floor(Math.random()*letters.length)];
-          letters.push(randomVal)
-           console.log("1");
-           if (document.querySelector("#numbers").checked == true) {
-               item.push(letter)
-               item[i] = item[i].replace('l', '1');
-               item[i]= item[i].replace('i', '3');
-               item[i]= item[i].replace('o', '0');
-               item.push(item[i])
-              item.push(letters[randomVal]);
-               }
-
-
-              if (document.querySelector("#numbers").checked == false) {
-              letters.push(randomVal);
-              console.log(item);
-              console.log(letters[randomVal]);
-          }
-          item=letters.push(randomVal).toString();
-
-      }
-      }
-      var demo= document.createTextNode(item.toString());
-
-      var final = item.toString();
-         var results = document.querySelector("#p1");
-        results.innerHTML = demo;
-}  
+           if (document.querySelector("#easyType").checked == true) {
+               letters = easyWords;
+           }
+           else {
+               letters = words;
+           }
+    for (var i = 0; i < 10; i++)
+    {
+        while (item.length<absolutelen) {
+         var randomVal = letters[Math.floor(Math.random()*letters.length)];
+        var search = ((randomVal^ letters[i]) + 0x100000000) % letters.length;
+     item.push(letters[search]);
+        if (document.querySelector("#numbers").checked == true) {
+                    item[i]= item[i].replace('e', '3');
+                    item.push(item[i])
+                   item.push(letters[randomVal]);
+                    }
+    
+    }
+    }
+    var resultSpan = document.getElementById("p1");
+    resultSpan.innerText = resultSpan.textContent = item.join(" ");
+}
