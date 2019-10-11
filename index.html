@@ -1,65 +1,41 @@
-<!DOCTYPE HTML>
 <html>
-<head>
-<title>Pizza Flame</title>
-<link href="project2style.css" rel="stylesheet">
-</head>
 
+    <head>
+        <title>XKCD Password Generator</title>
+        <link href="project3style.css" rel="stylesheet">
+        </head>
 <body>
-  <div class="header"><img src="http://www.pizzaflame.com/pf_HEADER.png" width="1000" height="237" border="0" usemap="#Map">
-    <map name="Map">
-      <area shape="rect" coords="508,9,553,29" href="http://www.pizzaflame.com/index.php" target="_self">
-      <area shape="rect" coords="562,11,637,29" href="http://www.pizzaflame.com/about.php" target="_self">
-      <area shape="rect" coords="646,10,724,30" href="http://www.pizzaflame.com/menu.php" target="_self">
-      <area shape="rect" coords="732,8,803,31" href="http://www.pizzaflame.com/specials.php" target="_self">
-      <area shape="rect" coords="811,7,882,32" href="http://www.pizzaflame.com/gallery.php" target="_self">
-      <area shape="rect" coords="890,9,992,28" href="http://www.pizzaflame.com/contact.php">
-      <area shape="rect" coords="17,10,239,149" href="http://www.pizzaflame.com/index.php" target="_self">
-      <area shape="rect" coords="945,32,982,61" href="https://www.facebook.com/PizzaFlameCoonRapids" target="_blank">
-    </map>
-  </div>
-  <div class="search">
-      <input type="text" size="20">
-      <input type="submit" value="Search">
-  </div>
-  <div class="content">
-    <div></div>
-    <div class="img">
-    <img src="http://www.pizzaflame.com/pf_content1.png" width="960" height="400">
-    </div>
-    <div></div></div>
-  <div class="content2"><strong>WELCOME TO PIZZA FLAME!</strong><br>
-    <br>
-
-    <p> Welcome to Pizza Flame! <br>
-      <br>
-    Along with our Famous Thin Crust Pizzas and Freshly Baked Cheese Bread, we also offer a variety of Pizza, Salads, Pasta and More! <br>
-    <br>
-    Family-Friendly Dining or Carryout, and Delivery to all areas of Coon Rapids. (Banquet Room is available to rent for larger groups / parties -inquire within)</h3>
-    <h3 class="h3"> This page is originally from:<a href="http://www.pizzaflame.com/index.php">Pizza Flame</a>
-
-<br>
-  </div>
-  <div class="footer"><img src="http://www.pizzaflame.com/pf_FOOTER_BG.png" width="1000" height="265" border="0" usemap="#Map2Map">
-    <map name="Map2Map">
-      <area shape="rect" coords="933,51,986,105" href="https://www.facebook.com/PizzaFlameCoonRapids">
-      <area shape="rect" coords="19,51,58,68" href="#">
-      <area shape="rect" coords="20,85,94,107" href="http://www.pizzaflame.com/about.php" target="_self">
-      <area shape="rect" coords="18,119,99,141" href="http://www.pizzaflame.com/menu.php" target="_self">
-      <area shape="rect" coords="20,156,90,176" href="http://www.pizzaflame.com/specials.php" target="_self">
-      <area shape="rect" coords="19,195,88,214" href="http://www.pizzaflame.com/gallery.php" target="_self">
-      <area shape="rect" coords="20,228,93,251" href="http://www.pizzaflame.com/contact.php" target="_self">
-    </map>
-    <map name="Map2">
-      <area shape="rect" coords="933,51,986,105" href="https://www.facebook.com/PizzaFlameCoonRapids">
-      <area shape="rect" coords="19,51,58,68" href="#">
-      <area shape="rect" coords="20,85,94,107" href="http://www.pizzaflame.com/about.php" target="_self">
-      <area shape="rect" coords="18,119,99,141" href="http://www.pizzaflame.com/menu.php" target="_self">
-      <area shape="rect" coords="20,156,90,176" href="http://www.pizzaflame.com/specials.php" target="_self">
-      <area shape="rect" coords="19,195,88,214" href="http://www.pizzaflame.com/gallery.php" target="_self">
-      <area shape="rect" coords="20,228,93,251" href="#">
-    </map>
-  </div>
+    <main>
+        <h1> XKCD Password Generator</h1>
+    <div>
+    <label for="minlen">Minimum Word Length</label>
+    <select id = "minlen">
+        <option value="2">Two Words</option>
+        <option value = "3"> Three Words</option>
+        <option value = "4"> Four Words </option>
+    </select>
 </div>
+<div>
+    <label for="maxlen">Maximum Word Length</label>
+    <select id = "maxlen">
+        <option value="3"> Three Words</option>
+        <option value="4"> Four Words </option>
+        <option value="5"> Five Words </option>
+        <option value="6"> Six Words </option>
+    </select>
+</div>
+
+<div>
+        <label for="absolutelen">Max Length </label>
+        <input type= "text" id = "wordlen"> <br>
+       <input type= "checkbox" id="easyType" >Easy Typing<br>
+        <input type= "checkbox" id= "numbers" >Numbered Substitutions<br>
+    <button type = "button" onclick = "xkcdWordGen()" >Submit</button>
+</div>
+
+    </main>
+    <p id="p1"></p>
+    <script src="project3.js">  </script>
+
 </body>
 </html>
