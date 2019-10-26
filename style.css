@@ -1,0 +1,227 @@
+body {
+    overflow: scroll;
+    background: #8DCB89 no-repeat center;
+    background-size: cover;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  h1 {
+      font-size: 26pt;
+      color: #663300;
+  }
+  h3 {
+      color: #663300;
+      font-size: 22pt;
+  
+  }
+  p {
+      font-family: fantasy;
+  
+  }
+  .negative-margin-top {
+    margin-top: -20px;
+  }
+  .slogan {
+      font-size: 12pt;
+      color: black;
+      top: 10%;
+      font-family: fantasy;
+  }
+  input[type=text] {
+    width: 30;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px #663300;
+    border-radius: 4px;
+  }
+  
+  .option {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 1000;
+    color: #444;
+    line-height: 1.3;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    height: 30px;
+    outline: none;
+  }
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #663300;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 260px;
+    height: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .button:disabled {
+    opacity: 0.5;
+  }
+  .checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #f1f1f1;
+    color: #666;
+    top: 10px;
+    height: 28px;
+    width: 28px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 7px;
+    outline: none;
+  }
+  .checkbox:checked::before {
+    position: absolute;
+    font-family: fantasy;
+    left: 11px;
+    top: 7px;
+    content: '\02143';
+    transform: rotate(40deg);
+  }
+  .checkbox:hover {
+    background-color: #f7f7f7;
+  }
+  .checkbox:checked {
+    background-color: #f1f1f1;
+  }
+  label {
+    font-family: fantasy;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
+    font-size: 15pt;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .left {
+    flex: 0 0 50%;
+    text-align: center;
+    width: 49%;
+    padding: 20px;
+    margin-top: 30px;
+    border-right: 1px solid #c3cbdb;
+  }
+  .right {
+    float: right;
+    width: 51%;
+    padding: 20px;
+    margin-top: -125px;
+  }
+  
+  .next {
+    display: none;
+    border-radius: 4px;
+    background-color: #663300;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 25px;
+    width: 260px;
+    height: 60px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 15px;
+  }
+  .verdict {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 17px;
+  }
+  #incorrect {
+    color: red;
+  }
+  #correct {
+    color: green;
+  }
+  .img-mini {
+    width: 100px; 
+    height: 60px;
+  }
+  #gif {
+    height: 250px;
+    width: 450px;
+    border: none;
+    border-radius: 6px;
+    margin-top: -125px;
+    margin-right: -15%;
+  }
+  button {
+    outline: none;
+  }
+  #trivia {
+    background-color: #dde4f0;
+    border-radius: 6px;
+    display: flex;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  }
+  #question {
+    font-size: 20px;
+  }
+  #answer {
+    width: 300px;
+    margin-left: 27%;
+  }
+  #submitAnswer {
+    margin-left: 30%;
+    margin-top: 30px;
+    height: 50px;
+    padding: 6px;
+  }
+  .loader {
+    height: 90px;
+    width: 90px;
+    margin-top: -25px;
+  }
