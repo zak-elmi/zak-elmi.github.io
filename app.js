@@ -9,8 +9,6 @@ const http = {
 
 let TriviaCentral = function(){
     this.correctAnswerIndex = -1
-    this.correctAnswerGifIndex = 0
-    this.incorrectAnswerGifIndex = 0
     this.correctAnswerGifURLs = []
     this.incorrectAnswerGifURLs = []
     this.init = this.init.bind(this)
@@ -78,17 +76,17 @@ TriviaCentral.prototype.init = function() {
             correct.style.display = "block"
             // show the 'Correct' gif
             let gif = document.getElementById("gif")
-            gif.src = this.correctAnswerGifURLs[this.correctAnswerGifIndex]
-            ++this.correctAnswerGifIndex
-            this.correctAnswerGifIndex %= this.correctAnswerGifURLs.length
+            // choose a random 'Correct' gif
+            let correctAnswerGifIndex = Math.floor(Math.random() * this.correctAnswerGifURLs.length)
+            gif.src = this.correctAnswerGifURLs[correctAnswerGifIndex]
         } else {
             let incorrect = document.getElementById("incorrect")
             incorrect.style.display = "block"
             // show the 'No' gif
             let gif = document.getElementById("gif")
-            gif.src = this.incorrectAnswerGifURLs[this.incorrectAnswerGifIndex]
-            ++this.incorrectAnswerGifIndex
-            this.incorrectAnswerGifIndex %= this.incorrectAnswerGifURLs.length
+            // choose a random 'No' gif
+            let incorrectAnswerGifIndex = Math.floor(Math.random() * this.incorrectAnswerGifURLs.length)
+            gif.src = this.incorrectAnswerGifURLs[incorrectAnswerGifIndex]
         }
     }.bind(this))
 }
